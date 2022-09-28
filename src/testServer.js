@@ -4,6 +4,8 @@ import userData from "./__mocks__/userData.json";
 
 const server = setupServer(
   rest.get("https://randomuser.me/api", (req, res, ctx) => {
+    // console.log("req: ", req.url.toString());
+
     return res(ctx.status(200), ctx.json(userData));
   }),
 
